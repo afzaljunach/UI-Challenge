@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.row {
+  --bs-gutter-x: 32px;
+}
+
 input, input:hover, input:focus, input:active, a, a:hover, a:focus, a:active, button, button:hover, button:focus, button:active {
   outline: none !important;
   box-shadow: none !important;
@@ -37,7 +41,9 @@ ul:not(.list-style), ol:not(.list-style) {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
 }
 
 .note {
@@ -91,6 +97,22 @@ p {
 .btn.btn-secondary:hover, .btn.btn-secondary:active {
   background-color: #404954;
   border-color: #404954;
+}
+
+.sPad-t {
+  padding-top: 64px;
+}
+
+.sPad-b {
+  padding-bottom: 64px;
+}
+
+.sPad-t-sm {
+  padding-top: 48px;
+}
+
+.sPad-b-sm {
+  padding-bottom: 48px;
 }
 
 .header-container {
@@ -252,4 +274,56 @@ p {
 }
 .home-intro-container .container > .row .home-graphic-info-wrap img {
   max-width: 100%;
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -1px;
+  color: #111827;
+}
+
+.home-feature-container {
+  background-color: #F9FAFB;
+  overflow: hidden;
+}
+.home-feature-container .container {
+  position: relative;
+  z-index: 1;
+}
+.home-feature-container .container:before {
+  content: "";
+  width: 404px;
+  height: 404px;
+  position: absolute;
+  bottom: -120px;
+  left: -167px;
+  z-index: -1;
+  background: url("../images/dot-pattern.svg") center center no-repeat;
+  background-size: 100% auto;
+}
+.home-feature-container .container .feature-blocks-wrap .row > div:nth-child(1), .home-feature-container .container .feature-blocks-wrap .row > div:nth-child(2) {
+  margin-bottom: 40px;
+}
+.home-feature-container .container .feature-blocks-wrap .row > div .feature-icon {
+  background-color: #6366F1;
+  padding: 15px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.home-feature-container .container .feature-blocks-wrap .row > div .feature-icon svg {
+  width: 18px;
+  height: auto;
+  display: block;
+}
+.home-feature-container .container .feature-blocks-wrap .row > div h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #111827;
+}
+.home-feature-container .container .feature-blocks-wrap .row > div p {
+  color: #6B7280;
 }
