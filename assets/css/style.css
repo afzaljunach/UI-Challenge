@@ -40,7 +40,7 @@ ul:not(.list-style), ol:not(.list-style) {
   }
 }
 
-p {
+.p, p {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 0;
@@ -419,4 +419,76 @@ p {
 .home-cSupport-container .container .row .home-cSupport-img img {
   min-width: 100%;
   display: block;
+}
+
+.footer-container .container .row .footer-logo-wrap .footer-logo {
+  width: 42px;
+  height: auto;
+  display: block;
+  margin-bottom: 32px;
+}
+.footer-container .container .row .footer-logo-wrap .footer-logo * {
+  fill: #D1D5DB;
+}
+.footer-container .container .row .footer-logo-wrap p {
+  color: #6B7280;
+}
+.footer-container .container .row .footer-logo-wrap .footer-social-icons {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 34px;
+}
+.footer-container .container .row .footer-logo-wrap .footer-social-icons a {
+  width: 20px;
+  margin-right: 28px;
+}
+.footer-container .container .row .footer-logo-wrap .footer-social-icons a svg {
+  display: block;
+  width: 100%;
+}
+.footer-container .container .row .footer-logo-wrap .footer-social-icons a svg * {
+  fill: #9CA3AF;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.footer-container .container .row .footer-logo-wrap .footer-social-icons a:hover svg * {
+  fill: #6366F1;
+}
+.footer-container .container .row .footer-links .footer-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1.2px;
+  color: #9CA3AF;
+}
+.footer-container .container .row .footer-links ul li {
+  display: block;
+  margin-top: 16px;
+}
+.footer-container .container .row .footer-links ul li a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6B7280;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.footer-container .container .row .footer-links ul li a:hover {
+  color: #25282d;
+}
+.footer-container .container .footer-credit {
+  border-top: 1px solid #E5E7EB;
+  margin-top: 48px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+.footer-container .container .footer-credit .p {
+  color: #9CA3AF;
 }

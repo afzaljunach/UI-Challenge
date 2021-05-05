@@ -44,7 +44,7 @@ ul,ol{
         max-width: 1400px;
     }
 }
-p{
+.p,p{
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 0;
@@ -221,7 +221,7 @@ p{
                             vertical-align: middle;
                             margin-left: 7px;
                             *{
-                                fill: #6B7280;
+                                fill: $grey-500;
                             }
                         }
                         &:hover{
@@ -327,7 +327,7 @@ p{
                         color: $darkGrey;
                     }
                     p{
-                        color: #6B7280;
+                        color: $grey-500;
                     }
                 }
             }
@@ -387,7 +387,7 @@ p{
                 p{
                     font-size: 18px;
                     line-height: 28px;
-                    color: #6B7280;
+                    color: $grey-500;
                 }
                 .btn{
                     margin-top: 24px;
@@ -398,7 +398,7 @@ p{
                 padding-top: 24px;
                 border-top: 1px solid #E5E7EB;
                 p{
-                    color: #6B7280;
+                    color: $grey-500;
                     &.review-credit{
                         margin-top: 12px;
                         color: #374151;
@@ -414,6 +414,82 @@ p{
                     min-width: 100%;
                     display: block;
                 }
+            }
+        }
+    }
+}
+.footer-container{
+    .container{
+        .row{
+            .footer-logo-wrap{
+                .footer-logo{
+                    width: 42px;
+                    height: auto;
+                    display: block;
+                    margin-bottom: 32px;
+                    *{
+                        fill: #D1D5DB;
+                    }
+                }
+                p{
+                    color: $grey-500;
+                }
+                .footer-social-icons{
+                    display: inline-flex;
+                    align-items: center;
+                    margin-top: 34px;
+                    a{
+                        width: 20px;
+                        margin-right: 28px;
+                        svg{
+                            display: block;
+                            width: 100%;
+                            *{
+                                fill:$grey-400;
+                                @include transition(all ease 0.3s);
+                            }
+                        }
+                        &:hover{
+                            svg * {
+                                fill:$primary;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-links{
+                .footer-title{
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 1.2px;
+                    color: $grey-400;
+                }
+                ul{
+                    li{
+                        display: block;
+                        margin-top: 16px;                        
+                        a{
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: $grey-500;
+                            @include transition(all ease 0.3s);
+                            &:hover{
+                                color: darken($grey-500,30%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-credit{
+            border-top: 1px solid #E5E7EB;
+            margin-top: 48px;
+            @include padding-y(32px);
+            text-align: center;
+            .p{
+                color: $grey-400;
             }
         }
     }
