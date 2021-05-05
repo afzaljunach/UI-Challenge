@@ -186,7 +186,7 @@ p{
     padding-top: 100px;
     .container{
         position: relative;
-        height: 100%;
+        height: 100%;        
         > .row{
             position: relative;
             height: 100%;
@@ -275,13 +275,29 @@ p{
         }
     }
 }
-
+.icon-box{
+    background-color: $primary;
+    padding: 15px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 15px;
+    svg{
+        width: 18px;
+        height: auto;
+        display: block;
+    }
+}
 .section-title{
     font-weight: 800;
     font-size: 36px;
     line-height: 40px;
     letter-spacing: -1px;
-    color: $darkGrey;
+    color: $darkGrey;    
+}
+.section-title-sm{
+    @extend .section-title;
+    font-size: 30px;
+    line-height: 36px;
 }
 .home-feature-container{
     background-color: #F9FAFB;
@@ -303,18 +319,7 @@ p{
                     &:nth-child(2){
                         margin-bottom: 40px;
                     }
-                    .feature-icon{
-                        background-color: $primary;
-                        padding: 15px;
-                        border-radius: 6px;
-                        display: inline-block;
-                        margin-bottom: 15px;
-                        svg{
-                            width: 18px;
-                            height: auto;
-                            display: block;
-                        }
-                    }
+                    
                     h6{
                         font-size: 18px;
                         line-height: 24px;
@@ -334,10 +339,9 @@ p{
 .home-trial-container{
     .container{
         background-color: $primary-strd;
-        padding-right: 0;
-        padding-top: 57px;
-        padding-left: 80px;
+        padding: 57px 0 0 80px;
         border-radius: 8px;
+        box-shadow: 0px 20px 25px -5px #0000001A;
         .row{
             .home-trial-info-wrap{
                 padding-top: 23px;
@@ -356,6 +360,7 @@ p{
                 }
                 .btn{
                     margin-top: 32px;
+                    font-weight: 500;
                 }
             }
             .home-trial-img-wrap{
@@ -367,4 +372,50 @@ p{
             }
         }
     }
+}
+.home-cSupport-container{
+    width: 100%;
+    overflow: hidden;
+    .container{
+        .row{
+            .home-cSupport-info{
+                padding-top: 60px;
+                h2{
+                    margin-bottom: 10px;
+                    font-weight: 900;
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #6B7280;
+                }
+                .btn{
+                    margin-top: 24px;
+                }
+            }
+            .home-cSupport-review{
+                margin-top: 32px;
+                padding-top: 24px;
+                border-top: 1px solid #E5E7EB;
+                p{
+                    color: #6B7280;
+                    &.review-credit{
+                        margin-top: 12px;
+                        color: #374151;
+                        img{
+                            @include circle(24px);
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+            .home-cSupport-img{
+                img{
+                    min-width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+    
 }
