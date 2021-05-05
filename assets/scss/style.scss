@@ -387,7 +387,7 @@ ul,ol{
                     @include bp(lg){
                         margin-top: 40px;
                     }
-                    .form-group{
+                    .form-group{  
                         display: flex;
                         @include bp(sm){
                             display: block;
