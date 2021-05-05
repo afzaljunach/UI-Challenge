@@ -98,6 +98,15 @@ p {
   background-color: #404954;
   border-color: #404954;
 }
+.btn.btn-light {
+  background-color: #fff;
+  border-color: #fff;
+  color: #6366F1;
+}
+.btn.btn-light:hover, .btn.btn-light:active {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
 
 .sPad-t {
   padding-top: 64px;
@@ -326,4 +335,38 @@ p {
 }
 .home-feature-container .container .feature-blocks-wrap .row > div p {
   color: #6B7280;
+}
+
+.home-trial-container .container {
+  background-color: #4338CA;
+  padding-right: 0;
+  padding-top: 57px;
+  padding-left: 80px;
+  border-radius: 8px;
+}
+.home-trial-container .container .row .home-trial-info-wrap {
+  padding-top: 23px;
+}
+@media (min-width: 1400px) {
+  .home-trial-container .container .row .home-trial-info-wrap {
+    padding-right: 110px;
+  }
+}
+.home-trial-container .container .row .home-trial-info-wrap h2 {
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+}
+.home-trial-container .container .row .home-trial-info-wrap p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #C7D2FE;
+}
+.home-trial-container .container .row .home-trial-info-wrap .btn {
+  margin-top: 32px;
+}
+.home-trial-container .container .row .home-trial-img-wrap img {
+  float: right;
+  max-width: 100%;
+  border-top-left-radius: 6px;
 }
