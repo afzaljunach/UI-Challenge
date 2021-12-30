@@ -1,0 +1,112 @@
+//Theme
+$primary: #6366F1;
+$primary-strd: #4338CA;
+$secondary: #4B5563;
+$dark: #000;
+$light: #fff;
+$grey: #D1D5DB;
+$grey-400: #9CA3AF;
+$grey-500: #6B7280;
+$darkGrey: #111827;
+
+
+//Mixins
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null, $zi: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: $zi;
+}
+
+@mixin absolute($args...) {
+	@include position(absolute, $args...);
+}
+
+@mixin fixed($args...) {
+	@include position(fixed, $args...);
+}
+
+@mixin padding-x($val) {
+	padding-left: $val;
+	padding-right: $val;
+}
+
+@mixin padding-y($val) {
+	padding-top: $val;
+	padding-bottom: $val;
+}
+
+@mixin transition($x...) {
+	-webkit-transition: $x;
+	-moz-transition: $x;
+	-ms-transition: $x;
+	-o-transition: $x;
+	transition: $x;
+}
+
+@mixin wh($size) {
+	width: $size;
+	height: $size;
+}
+
+@mixin circle($size) {
+	width: $size;
+	height: $size;
+	-webkit-border-radius: $size/2;
+	-moz-border-radius: $size/2;
+	border-radius: $size/2;
+}
+
+@mixin bp($class) {
+	@if $class==xs {
+		@media (max-width: 400px) {
+			@content;
+		}
+	}
+
+	@else if $class==sm {
+		@media (max-width: 575px) {
+			@content;
+		}
+	}
+
+	@else if $class==md {
+		@media (max-width: 768px) {
+			@content;
+		}
+	}
+
+	@else if $class==lg {
+		@media (max-width: 992px) {
+			@content;
+		}
+	}
+
+	@else if $class==xl {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	}
+
+	@else if $class==xxl {
+		@media (min-width: 1400px) {
+			@content;
+		}
+	}
+
+	@else if $class==only_desk {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Breakpoint mixin supports: xs, sm, md, lg, xl, xxl";
+	}
+}
+
+@mixin background-opacity($color, $opacity) {
+	background: rgba($color, $opacity);
+}
